@@ -1,0 +1,39 @@
+﻿@model User
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login and Registration</title>
+    <style>
+        div{
+            display : inline-block;
+            vertical-align:top;
+            margin-left:20px;
+        }
+        span{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Register to this cool site please <a href="login">Login</a></h1>
+    <div class="registration">
+        <form action="register" method="POST">
+            <span asp-validation-for="FirstName"></span>
+            <h1>First Name: <input type="text" asp-for="FirstName"> </h1>
+            <span asp-validation-for="LastName"></span>
+            <h1>Last Name : <input type="text" asp-for="LastName"> </h1>
+            <span asp-validation-for="Email"></span>
+            <h1>Email : <input type="text" asp-for="Email"> </h1>
+            <span asp-validation-for="Password"></span>
+            <h1>Password: <input type="password" asp-for="Password"> </h1>
+            <span asp-validation-for="Confirm"></span>
+            <h1>Confirm : <input type="password" asp-for="Confirm"> </h1>
+            <input type="submit" value ="Sign Up Now">
+        </form>
+    </div>
+    
+</body>
+</html>

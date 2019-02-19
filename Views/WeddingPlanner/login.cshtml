@@ -1,0 +1,29 @@
+@model LoginUser
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <style>
+        span{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+        
+    <h1>Login To this Cool Site <a href="/">Register</a></h1>
+    <div class="login">
+            <form action="confirm" method="POST">
+                <span asp-validation-for="Email"></span>
+                <h1>Email : <input type="text" asp-for="Email"> </h1>
+                <span asp-validation-for="Password"></span>
+                <h1>Password: <input type="password" asp-for="Password"> </h1>
+                <input type="submit" value="Login">
+            </form>
+    </div>
+    
+</body>
+</html>

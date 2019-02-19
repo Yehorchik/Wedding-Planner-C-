@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewBag.Wedding.WedderOne and @ViewBag.Wedding.WedderTwo</title>
+</head>
+<body>
+    <h1>@ViewBag.Wedding.WedderOne and @ViewBag.Wedding.WedderTwo Wedding   <a href="/dashboard">Dashboard</a> <a href="/logout">Log Out</a></h1>
+    <h3>@ViewBag.Wedding.Date.ToString("MMMM dd , yyyy")</h3>
+    <h3><a href="https://www.google.com/maps/place/@ViewBag.Wedding.WeddingAdress">@ViewBag.Wedding.WeddingAdress</a></h3>
+    @if(ViewBag.Wedding.Guest == null)
+    {
+        <h3>Guests: 0</h3>
+    }
+    else
+    {
+       <h3>Guests :</h3>
+       @foreach(var x in ViewBag.Wedding.Guest)
+       {
+           <li>@x.User.FirstName @x.User.LastName</li>
+       }
+    }
+    <td></td>
+</body>
+</html>
